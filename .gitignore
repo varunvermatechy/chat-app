@@ -102,6 +102,3 @@ dist
 
 # TernJS port file
 .tern-port
-/src/assets/.gitkeep
-/.vs/ProjectSettings.json
-/.vs/slnx.sqlite
