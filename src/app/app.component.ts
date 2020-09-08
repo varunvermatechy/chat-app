@@ -12,7 +12,6 @@ export class AppComponent {
   username = '';
   messages: Message[] = [];
   newMessage = '';
-  channelList: ChannelData[];
   chatClient: any;
   currentUser: User;
 
