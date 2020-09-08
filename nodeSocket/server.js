@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const serverSideClient = new StreamChat(
   "ef4ts7cwbnek","w35uf76x6vsdmxkejgh3qxpredukbs8stsa3vf8jk588meye55shrnvmx3bg3q9a");
-console.log('server side',serverSideClient);
 
 app.post('/join', async (req, res) => {
   const { username } = req.body;
@@ -30,19 +29,6 @@ app.post('/join', async (req, res) => {
   } catch (err) {
     console.log(err);
   }
-
-  // const admin = { id: 'admin' };
-  // const channel = serverSideClient.channel('team', 'talkshop', {
-  //   name: 'Talk Shop',
-  //   created_by: admin,
-  // });
-
-  // try {
-  //   await channel.create();
-  //   await channel.addMembers([username, 'admin']);
-  // } catch (err) {
-  //   console.log(err);
-  // }
 
   return res
     .status(200)
