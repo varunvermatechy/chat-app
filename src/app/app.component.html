@@ -17,7 +17,7 @@
   </div>
 
   <div *ngIf="channel" class="container">
-    <h3 class=" text-center">Say Hello !</h3>
+    <h3 class=" text-center" style="margin-top: 60px;">Say Hello !</h3>
     <div class="messaging">
       <div class="inbox_msg">
         <div class="mesgs">
@@ -57,7 +57,7 @@
                 name="newMessage"
                 [(ngModel)]="newMessage"
               />
-              <button class="msg_send_btn" type="button">
+              <button class="msg_send_btn" type="submit">
                 <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
               </button>
             </form>

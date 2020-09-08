@@ -138,7 +138,7 @@ img {
 }
 
 .received_withd_msg p {
-	background: #ff6e08 none repeat scroll 0 0;
+	background: #bbd2e3 none repeat scroll 0 0;
 	border-radius: 3px;
 	color: #000000;
 	font-size: 14px;
@@ -165,7 +165,7 @@ img {
 }
 
 .sent_msg p {
-	background: #ff6e08 none repeat scroll 0 0;
+	background: #d9f5cf none repeat scroll 0 0;
 	border-radius: 3px;
 	font-size: 14px;
 	margin: 0;

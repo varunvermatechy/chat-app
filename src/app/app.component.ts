@@ -8,7 +8,6 @@ import axios from 'axios';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular-chat';
   channel: ChannelData;
   username = '';
   messages: Message[] = [];
@@ -28,13 +27,7 @@ export class AppComponent {
 
       this.chatClient = new StreamChat(apiKey);
 
-      this.currentUser = await this.chatClient.setUser(
-        {
-          id: username,
-          name: username,
-        },
-        token
-      );
+      this.currentUser = await this.chatClient.setUser({ id: username, name: username, }, token);
 
       const channel = this.chatClient.channel('team', 'talkshop');
       await channel.watch();
@@ -43,35 +36,24 @@ export class AppComponent {
       this.channel.on('message.new', event => {
         this.messages = [...this.messages, event.message];
       });
-
-      const filter = {
-        type: 'team',
-        members: { $in: [`${this.currentUser.me.id}`] },
-      };
-      const sort = { last_message_at: -1 };
-
-      this.channelList = await this.chatClient.queryChannels(filter, sort, {
-        watch: true,
-        state: true,
-      });
-    } catch (err) {
+    } catch (err)
+     {
       console.log(err);
       return;
     }
   }
 
   async sendMessage() {
-    debugger;
-    if (this.newMessage.trim() === '') {
+    if (this.newMessage.trim() === '')
+    {
       return;
     }
 
     try {
-      await this.channel.sendMessage({
-        text: this.newMessage,
-      });
+      await this.channel.sendMessage({ text: this.newMessage,});
       this.newMessage = '';
-    } catch (err) {
+    } catch (err)
+     {
       console.log(err);
     }
   }
