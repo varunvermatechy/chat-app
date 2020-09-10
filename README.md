@@ -1,7 +1,7 @@
 # chat-app
 
 TO run node-
- --cd nodeSocket
+ --cd Socket
  --node server.js
 
  To run angular app
