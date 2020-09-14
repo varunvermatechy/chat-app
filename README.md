@@ -1,11 +1,12 @@
 # chat-app
 
-TO run node-
- --cd Socket
- --node server.js
+--Install all the packages by running- npm i
+--To run node-
+  --cd Socket
+  --node server.js
 
- To run angular app
- --ng s -o
+ --To run angular app
+   --ng s -o
 
 --I have used stream chat socket (trial version) to connect my application.
 --The socket is in nodeSocket folder.In this folder there is a file (server.js) in which the connection is made to Stream with StreamApiKey.
